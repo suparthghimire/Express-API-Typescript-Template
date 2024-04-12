@@ -1,4 +1,4 @@
-import { useTemplateRouter } from "@/modules/default/template.routes";
+import { useTemplateRouter } from "@/modules/template/template.routes";
 import type { Application } from "express";
 
 export function useRoutes(app: Application) {
