@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.13",
+    "@types/node": "^20.12.7",
+    "chokidar": "^3.6.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
+    "watch-compile": "swc src -w --out-dir dist",
+    "watch-dev": "nodemon --watch \"dist/**/*\" -e js ./dist/index.js",
+    "build": "tsc -p . && swc src -d dist",
+    "start": "NODE_ENV=production node dist/index.js",
+    "clean": "rm -rf dist"
+  }
+}
