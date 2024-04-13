@@ -41,29 +41,39 @@ yarn dev
 ```
 
 
-> Disclaimar 1 : All packages used here are marked with `latest` flag, meaning the versions installed in your system at the time being might vary. This can mean if any breaking change has been introduced in these packages which hasn't been addressed in this template, might cause the template to not function properly.
+## Disclaimers
 
-> Disclaimer 2: Commands below are setup for linux. If you are using this template in other OSs, you might need some changes. For example: `yarn clean` in windows will crash as `rm -rf` doesnt work on it. You might need to first install `rmraf` from npm and replace the existing yarn clean command.
+### Version Variability
+
+**All packages used in this template are tagged with the *`latest`* flag.** This means the versions installed may vary over time. If a package introduces a breaking change that is not yet accommodated in this template, it may affect functionality. Consider specifying more stable version numbers in your `package.json` to mitigate this risk.
+
+### Operating System Compatibility
+**Commands in this template are designed for *`Linux`* environments.** Windows users might encounter issues, particularly with commands like `yarn clean` that use `rm -rf`. To adapt:
+- Install `rimraf` using your preffered package manager
+- Replace `rm -rf` in the `clean` script with `rimraf`.
+
 
 # Contributions
-Read about how to contribute [here](#)
+Read about how to contribute [here](https://github.com/suparthghimire/Express-API-Typescript-Template/blob/main/CONTRIBUTING.md)
 
+# Frequently Asked Questions (FAQ)
 
-# FAQ
-1. **Why use `yarn` and not `pnpm` or `bun`?**
-- `pnpm` on my PC has always been slow (probably because my code resides in HDD instead of SSD). `yarn` has always worked and is faster on my PC, thus `yarn`. You can replace `yarn` with `pnpm` easily if you want. For `bun`, I think it needs more time to be a little bit more mature.
+### Why choose `yarn` over `pnpm` or `bun`?
+**Yarn vs. Pnpm**: On my system, `pnpm` performs slower—likely due to my HDD setup versus SSD. Yarn provides a faster experience.
+**Yarn vs. Bun**: I prefer to use more established tools in production environments. Bun looks promising, but time will tell whether it is stable or not.
 
-2. **Why use this instead of NestJs?**
-- This is not a replacement for Nest. Nest is a framework. This is just a template to write scalable apis without adhering to a framework
+### Why use this template instead of NestJS?
+**Template vs. Framework**: Unlike NestJS, which is a comprehensive framework, this project serves as a lightweight template. It allows developers to build scalable APIs without the constraints of a full framework, offering more flexibility.
 
-3. **How do i test?**
-- Tests are comming soon 😅
+### How do I run tests?
+**Testing**: Test integration is in progress and will be available soon. This will allow for robust validation of your application's functionalities.
 
-4. **Can I use it without credit?**
-- Yes. This is a template with MIT license. Use it however you want. No credits required.
+### Can I use this template without giving credit?
+**Licensing**: This template is released under the MIT license. You are free to use it in any of your projects without attribution.
 
-5. **How do I use this as a template?**
-- In github you will see `Use as Template` button on top left. Click on it and choose the option that you want i.e. Either create new repository or open in codespace.
-
+### How to use this template from GitHub?
+**Creating Your Project**:
+- Click the `Use as Template` button located at the top left of the GitHub repository page.
+- Follow the prompts to create a new repository from this template or explore other options like opening in a Codespace.
 
 
