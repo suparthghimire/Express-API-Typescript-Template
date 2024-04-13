@@ -49,10 +49,6 @@ yarn dev
 Read about how to contribute [here](#)
 
 
-# Bugs
-If you find any bugs/issues, please file an issue in [issues](https://github.com/suparthghimire/Express-API-Typescript-Template/issues/new) tab
- 
-
 # FAQ
 1. **Why use `yarn` and not `pnpm` or `bun`?**
 - `pnpm` on my PC has always been slow (probably because my code resides in HDD instead of SSD). `yarn` has always worked and is faster on my PC, thus `yarn`. You can replace `yarn` with `pnpm` easily if you want. For `bun`, I think it needs more time to be a little bit more mature.
