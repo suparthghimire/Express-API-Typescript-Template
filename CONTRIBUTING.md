@@ -22,10 +22,13 @@ Pull requests are the best way to propose changes to the codebase (we use [GitHu
 5. Make sure your code lints.
 6. Issue that pull request!
 
+## Automated Checks on Pull Requests
+
+When you submit a pull request, a GitHub workflow will automatically run, which includes Biome checks for linting and formatting errors. **Pull requests with linting or formatting errors will not be merged.** Please run `yarn lint` before pushing your changes to ensure that your contributions meet the code standards.
+
 ## Any contributions you make will be under the MIT Software License
 
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](https://opensource.org/licenses/MIT) that covers the project. This includes new code, files, patches, and any other modifications created or contributed by you.
-
 
 I use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/suparthghimire/Express-API-Typescript-Template/issues/new); it's that easy!
 
