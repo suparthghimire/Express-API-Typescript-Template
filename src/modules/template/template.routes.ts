@@ -2,11 +2,11 @@ import { Router } from "express";
 import { TemplateController } from "./template.controller";
 
 export function useTemplateRouter() {
-  const router = Router();
+	const router = Router();
 
-  router
-    .get("/", TemplateController.index)
-    .post("/", TemplateController.create);
+	router
+		.get("/", TemplateController.index)
+		.post("/", TemplateController.create);
 
-  return router;
+	return router;
 }
