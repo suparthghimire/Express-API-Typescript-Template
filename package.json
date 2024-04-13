@@ -1,31 +1,36 @@
 {
+	"name": "express-api-ts-template",
+	"version": "1.0.0",
+	"description": "A template for creating an Express API with TypeScript",
+	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "1.6.4",
-		"@swc/cli": "^0.3.12",
-		"@swc/core": "^1.4.13",
-		"@types/cors": "^2.8.17",
-		"@types/express": "^4.17.21",
-		"@types/morgan": "^1.9.9",
-		"@types/node": "^20.12.7",
-		"chokidar": "^3.6.0",
-		"concurrently": "^8.2.2",
-		"nodemon": "^3.1.0",
-		"typescript": "^5.4.5"
+		"@biomejs/biome": "latest",
+		"@swc/cli": "latest",
+		"@swc/core": "latest",
+		"@types/cors": "latest",
+		"@types/express": "latest",
+		"@types/morgan": "latest",
+		"@types/node": "latest",
+		"chokidar": "latest",
+		"concurrently": "latest",
+		"nodemon": "latest",
+		"typescript": "latest"
 	},
 	"scripts": {
 		"dev": "concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
 		"watch-compile": "swc src -w --out-dir dist",
 		"watch-dev": "nodemon --watch \"dist/**/*\" -e js ./dist/src/index.js",
-		"build": "tsc -p . && swc src -d dist",
-		"start": "NODE_ENV=production node dist/src/index.js",
+		"type-check": "tsc --noEmit -p .",
+		"build-only": "swc src -d dist",
 		"clean": "rm -rf dist",
-		"lint": "yarn biome check --apply ."
+		"lint": "yarn biome check --apply .",
+		"build": "yarn lint && yarn type-check && yarn build-only",
+		"start": "NODE_ENV=production node dist/src/index.js"
 	},
 	"dependencies": {
-		"cookie-parser": "^1.4.6",
-		"cors": "^2.8.5",
-		"dotenv": "^16.4.5",
-		"express": "^4.19.2",
-		"morgan": "^1.10.0"
+		"cors": "latest",
+		"dotenv": "latest",
+		"express": "latest",
+		"morgan": "latest"
 	}
 }

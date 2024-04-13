@@ -1,5 +1,5 @@
 export const TemplateService = {
-  getHelloWorld: () => {
-    return { message: "Hello World" };
-  },
+	getHelloWorld: () => {
+		return { message: "Hello World" };
+	},
 };
