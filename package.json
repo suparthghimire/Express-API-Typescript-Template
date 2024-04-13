@@ -23,7 +23,7 @@
 		"type-check": "tsc --noEmit -p .",
 		"build-only": "swc src -d dist",
 		"clean": "rm -rf dist",
-		"lint": "yarn clean && yarn biome check --apply .",
+		"lint": "yarn biome check --apply .",
 		"build": "yarn lint && yarn type-check && yarn build-only",
 		"start": "NODE_ENV=production node dist/src/index.js"
 	},
