@@ -45,7 +45,7 @@ yarn dev
 
 ### Version Variability
 
-**All packages used in this template are tagged with the *`latest`* flag.** This means the versions installed may vary over time. If a package introduces a breaking change that is not yet accommodated in this template, it may affect functionality. Consider specifying more stable version numbers in your `package.json` to mitigate this risk.
+**All packages used in this template are tagged with *`latest`* flag.** This means the versions installed may vary over time. If a package introduces a breaking change that is not yet accommodated in this template, it may affect functionality. Consider specifying more stable version numbers in your `package.json` to mitigate this risk.
 
 ### Operating System Compatibility
 **Commands in this template are designed for *`Linux`* environments.** Windows users might encounter issues, particularly with commands like `yarn clean` that use `rm -rf`. To adapt:
