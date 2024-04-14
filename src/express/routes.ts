@@ -3,5 +3,5 @@ import type { Application } from "express";
 
 export function useRoutes(app: Application) {
 	const templateRouter = useTemplateRouter();
-	app.use("/templatfdsfe", templateRouter);
+	app.use("/template", templateRouter);
 }

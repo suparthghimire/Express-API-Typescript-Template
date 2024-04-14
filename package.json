@@ -14,7 +14,8 @@
 		"chokidar": "latest",
 		"concurrently": "latest",
 		"nodemon": "latest",
-		"typescript": "latest"
+		"typescript": "latest",
+		"vitest": "^1.5.0"
 	},
 	"scripts": {
 		"dev": "concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
@@ -25,7 +26,8 @@
 		"clean": "rm -rf dist",
 		"lint": "yarn biome check --apply .",
 		"build": "yarn lint && yarn type-check && yarn build-only",
-		"start": "NODE_ENV=production node dist/src/index.js"
+		"start": "NODE_ENV=production node dist/src/index.js",
+		"test": "vitest"
 	},
 	"dependencies": {
 		"cors": "latest",
