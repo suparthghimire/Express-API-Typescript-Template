@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "latest",
+		"@swc-node/register": "latest",
 		"@swc/cli": "latest",
 		"@swc/core": "latest",
 		"@types/cors": "latest",
@@ -18,14 +19,15 @@
 		"vitest": "latest"
 	},
 	"scripts": {
-		"dev": "concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
+		"check-env": "node -r @swc-node/register src/config/env/index.ts",
+		"dev": "yarn check-env && concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
 		"watch-compile": "swc src -w --out-dir dist",
-		"watch-dev": "nodemon --watch \"dist/**/*\" -e js ./dist/src/index.js",
+		"watch-dev": "nodemon --exitcrash --watch \"dist/**/*\" -e js ./dist/src/index.js",
 		"type-check": "tsc --noEmit -p .",
 		"build-only": "swc src -d dist",
 		"clean": "rm -rf dist",
 		"lint": "yarn biome check --apply .",
-		"build": "yarn lint && yarn type-check && yarn build-only",
+		"build": "yarn check-env && yarn lint && yarn type-check && yarn build-only",
 		"start": "NODE_ENV=production node dist/src/index.js",
 		"test": "vitest"
 	},
@@ -33,6 +35,7 @@
 		"cors": "latest",
 		"dotenv": "latest",
 		"express": "latest",
-		"morgan": "latest"
+		"morgan": "latest",
+		"zod": "^3.22.4"
 	}
 }

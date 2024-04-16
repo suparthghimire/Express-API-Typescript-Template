@@ -1,5 +1,6 @@
 import { env } from "@/config/env";
 import { SetupServer } from "@/express/server";
+import { isDev } from "@/globals/global.config";
 
 function Main() {
 	try {
@@ -8,14 +9,14 @@ function Main() {
 		/**
 		 * Start the server.
 		 */
-		expressApp.listen(env.port, function listenCallback() {
-			console.log(`Server is running on port ${env.port}`);
+		expressApp.listen(env.PORT, function listenCallback() {
+			console.log(`Server is running on port ${env.PORT}`);
 		});
 	} catch (error) {
 		/**
 		 * If there is an error, log it and exit the process.
 		 */
-		if (env.isDev) console.error(error);
+		if (isDev) console.error(error);
 		process.exit(1);
 	}
 }
