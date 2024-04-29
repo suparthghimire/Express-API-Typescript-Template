@@ -1,0 +1,36 @@
+name: Security Vunerability
+description: File a security vulnerability report
+title: "[Security]: "
+labels: ["bug", "critical"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing a security vulnerability report, please search for existing reports on the same issue. If there are none;
+        Thank you for reporting a security vulnerability. Please fill out the following details to help us understand the issue better.
+
+        ---
+        
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Security description
+      description: What's the security issue?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the behaviour?
+  - type: textarea
+    attributes:
+      label: "Screenshots (if applicable)"
+      description: "Provide any relevant screenshots."
+      placeholder: "Add relevant screenshots here."
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, provide relevant log output. Syntax highlighting is auto supported.
+      render: bash
