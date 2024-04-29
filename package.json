@@ -27,7 +27,7 @@
 		"build-only": "swc src -d dist",
 		"clean": "rm -rf dist",
 		"lint": "yarn biome check --apply .",
-		"build": "yarn check-env && yarn lint && yarn type-check && yarn build-only",
+		"build": "yarn check-env yarn lint && yarn type-check && yarn build-only",
 		"start": "NODE_ENV=production node dist/src/index.js",
 		"test": "vitest"
 	},
