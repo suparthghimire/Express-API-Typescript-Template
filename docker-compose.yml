@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  api:
+    container_name: express-api-template
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      - PORT=${PORT}
+      - EXPOSE_PORT=${EXPOSE_PORT}
+    ports:
+      - ${EXPOSE_PORT}:${PORT}
+
+    env_file:
+      - .env
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    name: express-api-template
+    driver: bridge

@@ -315,7 +315,7 @@
   resolved "https://registry.yarnpkg.com/@swc-node/core/-/core-1.13.0.tgz#209d70f6371049926915a7d23a502144cdb5cffb"
   integrity sha512-lFPD4nmy4ifAOVMChFjwlpXN5KQXvegqeyuzz1KQz42q1lf+cL3Qux1/GteGuZjh8HC+Rj1RdNrHpE/MCfJSTw==
 
-"@swc-node/register@^1.9.0":
+"@swc-node/register@latest":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@swc-node/register/-/register-1.9.0.tgz#dcab1567a3999f75e04fc1cf9803d9673dddc50a"
   integrity sha512-i0iYInD4q5v3xQC6bKvs0QtfUxu197CU5qKALmpxEqTYs7sIhQ7KFLe3kP+eAR4gRkJTvAgjQgrokXLN2jZrOw==
