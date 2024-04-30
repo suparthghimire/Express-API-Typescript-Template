@@ -22,6 +22,8 @@ Pull requests are the best way to propose changes to the codebase (we use [GitHu
 5. Make sure your code lints.
 6. Issue that pull request!
 
+`Note: Make sure the Pull Request isn't sent to main branch. Any PR's directed to main branch will not be considered.`
+
 ## Automated Checks on Pull Requests
 
 When you submit a pull request, a GitHub workflow will automatically run, which includes Biome checks for linting and formatting errors. **Pull requests with linting or formatting errors will not be merged.** Please run `yarn lint` before pushing your changes to ensure that your contributions meet the code standards.
