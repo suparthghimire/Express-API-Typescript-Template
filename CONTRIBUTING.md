@@ -22,7 +22,7 @@ Pull requests are the best way to propose changes to the codebase (we use [GitHu
 5. Make sure your code lints.
 6. Issue that pull request!
 
-`Note: Make sure the Pull Request isn't sent to main branch. Any PR's directed to main branch will not be considered.`
+`Note: Make sure the Pull Request isn't sent to main branch. We have development branch for a reason. Any PR's directed to main branch will not be considered.`
 
 ## Automated Checks on Pull Requests
 
