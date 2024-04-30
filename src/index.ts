@@ -10,7 +10,7 @@ function Main() {
 		 * Start the server.
 		 */
 		expressApp.listen(env.PORT, function listenCallback() {
-			console.log(`Server is running on port ${env.PORT}`);
+			console.log(`Server running on port ${env.PORT}`);
 		});
 	} catch (error) {
 		/**
