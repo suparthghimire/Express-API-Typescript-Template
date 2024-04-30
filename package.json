@@ -3,21 +3,6 @@
 	"version": "1.0.0",
 	"description": "A template for creating an Express API with TypeScript",
 	"license": "MIT",
-	"devDependencies": {
-		"@biomejs/biome": "latest",
-		"@swc-node/register": "latest",
-		"@swc/cli": "latest",
-		"@swc/core": "latest",
-		"@types/cors": "latest",
-		"@types/express": "latest",
-		"@types/morgan": "latest",
-		"@types/node": "latest",
-		"chokidar": "latest",
-		"concurrently": "latest",
-		"nodemon": "latest",
-		"typescript": "latest",
-		"vitest": "latest"
-	},
 	"scripts": {
 		"check-env": "node -r @swc-node/register src/config/env/index.ts",
 		"dev": "yarn check-env && concurrently \"yarn watch-compile\" \"yarn watch-dev\"",
@@ -31,11 +16,26 @@
 		"start": "NODE_ENV=production node dist/src/index.js",
 		"test": "vitest"
 	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.1",
+		"@swc-node/register": "^1.9.0",
+		"@swc/cli": "^0.3.12",
+		"@swc/core": "^1.4.17",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"@types/morgan": "^1.9.9",
+		"@types/node": "^20.12.7",
+		"chokidar": "^3.6.0",
+		"concurrently": "^8.2.2",
+		"nodemon": "^3.1.0",
+		"typescript": "^5.4.5",
+		"vitest": "^1.5.3"
+	},
 	"dependencies": {
-		"cors": "latest",
-		"dotenv": "latest",
-		"express": "latest",
-		"morgan": "latest",
-		"zod": "^3.22.4"
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"morgan": "^1.10.0",
+		"zod": "^3.23.5"
 	}
 }
