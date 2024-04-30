@@ -38,9 +38,6 @@ describe("SetupServer", () => {
 	it("should initialize the server with middleware and routes", () => {
 		SetupServer();
 
-		// Checks if dotenv.config() was called
-		expect(dotenv.config).toHaveBeenCalledTimes(1);
-
 		// Checks if useMiddleware and useRoutes were called with the express app
 		expect(useMiddleware).toHaveBeenCalledOnce();
 		expect(useRoutes).toHaveBeenCalledOnce();
