@@ -20,9 +20,9 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Build Check
-        run: yarn type-check && yarn test && yarn build-only
+        run: pnpm type-check && pnpm test && pnpm build-only
       - name: Feedback
         run: echo "Build check passed"
 

@@ -5,14 +5,14 @@
 	"license": "MIT",
 	"scripts": {
 		"check-env": "tsup src/config/env/index.ts && node dist/index.js",
-		"dev": "yarn check-env && tsup --watch --onSuccess 'yarn start-only'",
+		"dev": "pnpm check-env && tsup --watch --onSuccess 'pnpm start-only'",
 		"type-check": "tsc --noEmit -p .",
 		"build-only": "tsup",
 		"clean": "rm -rf dist",
-		"lint": "yarn biome check --apply ./src/",
-		"build": "yarn check-env && yarn lint && yarn type-check && yarn build-only",
+		"lint": "pnpm biome check --apply ./src/",
+		"build": "pnpm check-env && pnpm lint && pnpm type-check && pnpm build-only",
 		"start-only": "NODE_ENV=production node dist/index.js",
-		"start": "yarn build & yarn start-only",
+		"start": "pnpm build & pnpm start-only",
 		"test": "vitest"
 	},
 	"devDependencies": {
