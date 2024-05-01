@@ -26,7 +26,7 @@ Pull requests are the best way to propose changes to the codebase (we use [GitHu
 
 ## Automated Checks on Pull Requests
 
-When you submit a pull request, a GitHub workflow will automatically run, which includes Biome checks for linting and formatting errors. **Pull requests with linting or formatting errors will not be merged.** Please run `yarn lint` before pushing your changes to ensure that your contributions meet the code standards.
+When you submit a pull request, a GitHub workflow will automatically run, which includes Biome checks for linting and formatting errors. **Pull requests with linting or formatting errors will not be merged.** Please run `pnpm lint` before pushing your changes to ensure that your contributions meet the code standards.
 
 ## Any contributions you make will be under the MIT Software License
 
