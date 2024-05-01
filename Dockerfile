@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn
+RUN pnpm install
 
-RUN yarn build
+RUN pnpm build
 
 RUN chmod +x start.sh
 
