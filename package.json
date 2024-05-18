@@ -13,24 +13,28 @@
 		"build": "pnpm check-env && pnpm lint && pnpm type-check && pnpm build-only",
 		"start-only": "NODE_ENV=production node dist/index.js",
 		"start": "pnpm build & pnpm start-only",
-		"test": "vitest"
+		"test": "vitest",
+		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.7.1",
+		"@biomejs/biome": "^1.7.3",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
 		"@types/cors": "^2.8.17",
 		"@types/express": "^4.17.21",
 		"@types/morgan": "^1.9.9",
-		"@types/node": "^20.12.7",
+		"@types/node": "^20.12.12",
+		"husky": "^9.0.11",
 		"nodemon": "^3.1.0",
 		"tsup": "^8.0.2",
 		"typescript": "^5.4.5",
-		"vitest": "^1.5.3"
+		"vitest": "^1.6.0"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
 		"morgan": "^1.10.0",
-		"zod": "^3.23.5"
+		"zod": "^3.23.8"
 	}
 }
